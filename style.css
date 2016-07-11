@@ -16,8 +16,14 @@ h2 {
 	font-weight: 400 !important; 
 	
 }
-
-
+.social {
+		
+		margin: 10px;
+		float: left;
+		display: inline;
+	}
+	
+	
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
 	h1 {
@@ -30,6 +36,10 @@ h2 {
 	#text {
 		margin-top: -50%;
 		margin-left: 50%;
+	}
+	.social {
+		
+		width: 10%;
 	}
 }
 /* Small devices (tablets, 768px and up) */
@@ -46,6 +56,10 @@ h2 {
 		margin-top: 58%;
 		margin-left: -20%;
 	}
+	.social {
+		
+		width: 10%;
+	}
 }
 /* tablets/desktops and up ----------- */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -61,6 +75,10 @@ h2 {
 		margin-left: -15%;
 	}
 
+	.social {
+		
+		width: 10%;
+	}
 
 }
 /* large desktops and up ----------- */
@@ -75,6 +93,10 @@ h2 {
 		margin-top: 24%;
 		margin-left: -8%;
 	}
-
+	.social {
+		
+		width: 8%;
+	}
+	
 	}
 }
