@@ -1,0 +1,466 @@
+/**
+ * Basic styling
+ */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body {
+    
+    font-weight: $base-font-weight;
+    font-size: 1.3em !important;
+    font-family: $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    display: block;
+    
+    max-width: 100%;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+
+/**
+ * Headings
+ */
+h1 {
+    font-size: 18px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 16px;
+}
+
+
+/**
+ * Links
+ */
+
+a {
+    color: #25b3bc;
+    text-decoration: none;
+    transition: border .5s;
+}
+
+a:hover {
+    border-bottom: 2px dotted #000;
+}
+
+
+.post-content h2:before {
+    
+
+    color: #25bcba;
+}
+
+.link {
+    padding: 2px;
+    color: #25b3bc;
+    text-decoration: none;
+    transition: background-color .7s;
+}
+
+.link:hover {
+    background-color: #e6e6e6;
+    border: none;
+}
+
+
+/**
+ * Share
+ */
+
+.share {
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 17px;
+}
+
+.share a {
+    border-bottom: none;
+}
+
+.twitter-share {
+    color: #1B95E0;
+}
+
+.facebook-share {
+    color: #3A5795;
+}
+
+.googleplus-share {
+    color: #E53935;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    border-left: 5px solid #eee;
+    margin-left: 30px;
+    padding: 5px 15px;
+    color: #888888;
+}
+
+
+/**
+ * Hr
+ */
+hr {
+    border: none;
+    height: 1px;
+    margin: 40px auto;
+    background: #dcdcdc;
+    width: 100%;
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid #f8f8f8;
+    border-radius: 3px;
+    background-color: #f8f8f8;
+    color: #27badf;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+/**
+ * Table
+ */
+
+table, th {
+    width: 100%;
+    table-layout: fixed;
+    margin: 24px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    border-collapse: collapse;
+line-height: 25px;
+letter-spacing: 1px;
+}
+
+
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left:0 !important;
+    padding: 0;
+}
+ul.social-network li {
+    display: inline;
+    margin: 0 0px;
+}
+
+
+/* footer social icons */
+.social-network a.icoYouTube:hover {
+    background-color: #BB0000;
+}
+.social-network a.icoFacebook:hover {
+    background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+    background-color:#33ccff;
+}
+
+.social-network a.icoSnapchat:hover {
+    background-color:#FFFC00;
+}
+.social-network a.icoLinkedin:hover {
+    background-color:#007bb7;
+}
+.social-network a.icoInstagram:hover {
+    background-color: #125688;
+}
+.social-network a.icoGithub:hover {
+    background-color: #6e5494;
+}
+.social-network a.icoEnvelope:hover {
+    background-color: #22263D;
+}
+
+
+
+.social-network a.icoYouTube:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGithub:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i,
+.social-network a.icoInstagram:hover i, .social-network a.icoSnapchat:hover i, .social-network a.icoEnvelope:hover i {
+    color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+    color:#44BCDD;
+}
+
+.social-circle li a {
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 50px;
+    height: 50px;
+    font-size:1.4em;
+}
+.social-circle li i {
+    margin:0;
+    line-height:50px;
+    text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.social-circle i {
+    color: #696969;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+a {
+ background-color: #000000;   
+}
+
+#subheading {
+    padding-left: 150px; 
+    margin-top: -190px;
+}
+
+.container-fluid {
+        bottom: 110px;
+        position: fixed;
+        
+        
+        padding-left: 5% !important;
+
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left:auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    padding-bottom: 110px;
+    
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+@media only screen and (max-width: 542px) {
+        
+        .social-circle li a {
+            width: 40px;
+            height: 40px;
+        }
+        .social-circle li i {
+            
+            line-height:40px;
+        }
+
+       
+        
+
+        
+
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+
+
+
+/**
+ * TBC
+ */
+
+.tbc {
+    height: 1px;
+    margin: 6rem auto;
+    width: 100%
+}
+
+.tbc:before {
+    content: "- T.B.C -";
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #aaa;
+    letter-spacing: 4px;
+    position: relative;
+    top: -8px;
+}
+
+
+/**
+ * EOF
+ */
+.eof {
+    height: 1px;
+    margin:6rem auto;
+    width: 100%;
+}
+
+.eof:before {
+    content: "- E.O.F -";
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #aaa;
+    letter-spacing: 4px;
+    position: relative;
+    top: -8px;
+}
+
+
+/**
+ * Evidence
+ */
+.evidence {
+    background-image: -webkit-linear-gradient(top, rgba(255,240,70,0.7), rgba(255,240,70,0.7));
+    background-image: linear-gradient(to bottom, rgba(255,240,70,0.7), rgba(255,240,70,0.7));
+    color: #222;
+}
