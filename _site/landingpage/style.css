@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,400italic);
+
+body{
+	background-color: white;
+
+}
+
+
+h1 { 
+	font-family: 'Open Sans', Arial, serif !important; 
+	font-weight: 800 !important;
+	}
+
+h2 { 
+	font-family: 'Open Sans', Arial, serif !important; 
+	font-weight: 400 !important; 
+	
+}
+.social {
+		
+		margin: 10px;
+		float: left;
+		display: inline;
+	}
+	
+	
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+	h1 {
+		font-size: 250% !important;
+	}
+	h2 {
+		font-size: 200% !important;
+	}
+
+	#text {
+		margin-top: -50%;
+		margin-left: 50%;
+	}
+	.social {
+		
+		width: 10%;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+	h1 {
+		font-size: 250% !important;
+	}
+	h2 {
+		font-size: 200% !important;
+	}
+
+	#text {
+		margin-top: 58%;
+		margin-left: -20%;
+	}
+	.social {
+		
+		width: 10%;
+	}
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+	h1 {
+		font-size: 300% !important;
+	}
+	h2 {
+		font-size: 200% !important;
+	}
+
+	#text {
+		margin-top: 40%;
+		margin-left: -15%;
+	}
+
+	.social {
+		
+		width: 10%;
+	}
+
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+	h1 {
+		font-size: 300% !important; 
+	}
+	h2 {
+		font-size: 200% !important;
+	}
+	#text {
+		margin-top: 24%;
+		margin-left: -8%;
+	}
+	.social {
+		
+		width: 8%;
+	}
+	
+	}
+
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoYouTube:hover {
+	background-color: #BB0000;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+
+.social-network a.icoSnapchat:hover {
+	background-color:#FFFC00;
+}
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoInstagram:hover {
+    background-color: #125688;
+}
+.social-network a.icoGithub:hover {
+    background-color: #6e5494;
+}
+.social-network a.icoEnvelope:hover {
+    background-color: #22263D;
+}
+
+
+
+.social-network a.icoYouTube:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGithub:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i,
+.social-network a.icoInstagram:hover i, .social-network a.icoSnapchat:hover i, .social-network a.icoEnvelope:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #696969;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+a {
+ background-color: #000000;   
+}
+}
