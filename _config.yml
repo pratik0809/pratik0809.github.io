@@ -1,19 +1,18 @@
 # Site settings
 title: Pratik Sampat
-name: Pratik Sampat # your name
-email: pratiks0809@gmail.com # your email address
-description: >
-    A Simple Jekyll Blog Theme. # this means to ignore newlines until "baseurl:"#
-#baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://pratiksampat.com/" # the base hostname & protocol for your site
-twitter_username: itisbenjamin1 # your Twitter username
-github_username: itisbenjamin # your Github username
-disqus_username: itisbenjamin # your disqus username
+name: Pratik Sampat 
+email: pratiks0809@gmail.com 
+description: 
+url: "https://pratiksampat.com/" 
+enforce_ssl: pratiksampat.com
+github_username: pratiks0809 
+disqus_username:  
 
-google-analytics: UA-90540912-1 # add it if you have one
-
-skillstree: true # turn on or off the skills tree in about page
+google-analytics: UA-90540912-1 
 
 # Build settings
 permalink: none
 markdown: kramdown
+
+
+
