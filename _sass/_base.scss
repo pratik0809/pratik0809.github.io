@@ -97,6 +97,13 @@ h6 {
     font-size: 0.9em;
     text-align: center;
 }
+
+#success {
+    font-weight: bold;
+    color: green;
+    display: none;
+    margin-left: 15px; 
+}
 /**
  * Links
  */
@@ -338,6 +345,11 @@ a {
         
         padding-left: 5% !important;
 
+}
+
+#thumbsup {
+
+    
 }
 
 /**
