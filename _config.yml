@@ -1,18 +1,18 @@
 # Site settings
 title: Pratik Sampat
-name: Pratik Sampat 
-email: pratiks0809@gmail.com 
-description: 
-url: "https://pratiksampat.com/" 
+name: Pratik Sampat
+email: pratiks0809@gmail.com
+description:
+url: "https://pratiksampat.com/"
 enforce_ssl: pratiksampat.com
-github_username: pratiks0809 
-disqus_username:  
+github_username: pratiks0809
+disqus_username:
 
-google-analytics: UA-90540912-1 
+google-analytics: UA-90540912-1
 
 # Build settings
 permalink: none
 markdown: kramdown
 
-
-
+gems:
+  - jemoji

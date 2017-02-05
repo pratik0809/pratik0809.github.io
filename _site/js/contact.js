@@ -6,6 +6,7 @@ $(document).ready(function(){
         var contactMessage = $('#contact-message').val();
         // data validation code here
         var url = "//docs.google.com/forms/d/e/1FAIpQLSf-XZuDN7H2r-o_QxXFV6CAychnckBikm4hlFGedO2SwUmriQ/formResponse";
+        
         var data = {
             'entry.1983930535': contactName,
             'entry.118759962': contactEmail,
@@ -17,20 +18,20 @@ $(document).ready(function(){
         $.ajax({
                 url: url,
                 type: "POST",            
-                crossDomain:true,
                 dataType: "json",
-                data: data,
+                data: data,    
+                crossDomain: true,
                 statusCode: {
-                        0: function() {
-                                console.log("success");
-                                alert("Thanks! Your record was saved.");
-                        },
-                        200: function() {
-                                console.log("success");
-                                alert("Thanks! Your record was saved.");                            
-                        }
-                       
+                    0: function() {
+                        $("#success").fadeIn("fast", clearForm())
+                    }
+
                 }
+                
         });
+
+        clearForm = function() {
+            $('#myform')[0].reset();
+        }
     });
 });
