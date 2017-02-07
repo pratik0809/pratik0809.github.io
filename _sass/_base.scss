@@ -12,7 +12,7 @@
 
 
 body {
-    
+
     font-weight: $base-font-weight;
     font-size: 1.3em !important;
     font-family: $base-font-family;
@@ -45,7 +45,7 @@ ul, ol, dl, figure,
  */
 img {
     display: block;
-    
+
     max-width: 100%;
 }
 
@@ -102,7 +102,7 @@ h6 {
     font-weight: bold;
     color: green;
     display: none;
-    margin-left: 15px; 
+    margin-left: 15px;
 }
 /**
  * Links
@@ -120,7 +120,7 @@ a:hover {
 
 
 .post-content h2:before {
-    
+
 
     color: #25bcba;
 }
@@ -330,28 +330,72 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 a {
- background-color: #000000;   
+ background-color: #000000;
 }
 
 #subheading {
-    padding-left: 150px; 
+    padding-left: 150px;
     margin-top: -190px;
 }
 
 .container-fluid {
         bottom: 110px;
         position: fixed;
-        
-        
+
+
         padding-left: 5% !important;
 
 }
 
-#thumbsup {
+#msgme {
+  background-color: white;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #f0f0f0;
+  color: #0099ff;
+  text-align: center;
+  width: 140px;
+  font-size: 14px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
 
-    
+}
+#msgme:focus {
+  outline: 0;
+}
+#msgme:hover {
+    background-color: #0087f6;
+    color: white;
+    border-color: white;
+
+
 }
 
+#msgme:hover #logofill {
+  fill: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+
+
+#messengerlogo{
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: inline;
+  align-items: center;
+  -webkit-justify-content:center;
+  justify-content:center;
+
+
+}
+
+svg {
+  vertical-align: middle;
+}
+
+svg:hover {
+  fill: white;
+}
 /**
  * Wrapper
  */
@@ -363,7 +407,7 @@ a {
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     padding-bottom: 110px;
-    
+
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -375,20 +419,20 @@ a {
 }
 
 @media only screen and (max-width: 542px) {
-        
+
         .social-circle li a {
             width: 40px;
             height: 40px;
         }
         .social-circle li i {
-            
+
             line-height:40px;
         }
 
-       
-        
 
-        
+
+
+
 
 }
 

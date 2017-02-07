@@ -273,6 +273,49 @@ a {
   position: fixed;
   padding-left: 5% !important; }
 
+#msgme {
+  background-color: white;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #f0f0f0;
+  color: #0099ff;
+  text-align: center;
+  width: 140px;
+  font-size: 14px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s; }
+
+#msgme:focus {
+  outline: 0; }
+
+#msgme:hover {
+  background-color: #0087f6;
+  color: white;
+  border-color: white; }
+
+#msgme:hover #logofill {
+  fill: white;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s; }
+
+#messengerlogo {
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-align-items: center;
+  /* Safari 7.0+ */
+  display: inline;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+svg {
+  vertical-align: middle; }
+
+svg:hover {
+  fill: white; }
+
 /**
  * Wrapper
  */
