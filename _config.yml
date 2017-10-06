@@ -8,11 +8,12 @@ enforce_ssl: pratiksampat.com
 github_username: pratiks0809
 disqus_username:
 
-google-analytics: UA-90540912-1
+google-analytics: UA-90540912-2
 
 # Build settings
-permalink: none
+permalink: pretty
 markdown: kramdown
 
 gems:
   - jemoji
+  - jekyll-postfiles

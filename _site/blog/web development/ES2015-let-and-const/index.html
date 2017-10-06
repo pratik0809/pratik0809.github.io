@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/hint.min.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/blog/web%20development/ES2015-let-and-const/">
+  <link rel="alternate" type="application/rss+xml" title="Pratik Sampat" href="http://0.0.0.0:4000/feed.xml">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="canonical" href="%7B%20%7B%20site.url%20%7D%20%7D%7B%20%7B%20page.url%20%7D%20%7D">
+
+<!--JS-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+<script type="text/javascript">
+    var host = "pratiksampat.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+
+<!-- Google font -->
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto%20Sans">
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+  ga('create', 'UA-90540912-2', 'auto');
+  ga('send', 'pageview');
+    
+	</script>
+
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ES2015 - let and const</title>
+  <meta name="description" content="What is ES2015 (formerly known as ES6)?">
+  
+  
+  
+
+
+
+
+
+
+        <style>
+	.post-content {
+		max-width: 650px;
+
+	}
+
+	img {
+		margin: auto;
+
+	}
+</style>
+  <header class="post-header">
+
+    <center>
+<div class="post-title" itemprop="name headline">ES2015 - let and const</div>
+
+		<div class="post-meta">
+<i class="fa fa-calendar-o"></i> <time datetime="01 May 2017" itemprop="datePublished">May 1 2017</time>
+
+		  •  <i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pratik Sampat</span>
+        
+	</span>
+</div>
+
+        
+        <div class="post-tags">
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="wrapper">
+<div class="post-content">
+    <center>
+	
+    </center>
+</div>
+
+
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="what-is-es2015-formerly-known-as-es6">What is ES2015 (formerly known as ES6)?</h2>
+
+<p><img src="http://egorsmirnov.me/assets/berlin-angular-meetup-26/images/es2015.jpg" alt="What is ES2015?"></p>
+<ul>
+  <li>Biggest update to JS since 1997</li>
+  <li>Hopefully release a new version every year</li>
+</ul>
+
+<h2 id="whats-new">What’s new?</h2>
+
+<ul>
+  <li>New ways to declare variables and functions</li>
+  <li>More efficient data structures</li>
+  <li>Promises and generators</li>
+  <li>And more!</li>
+</ul>
+
+<h2 id="two-new-ways-to-declare-variables">Two New Ways to Declare Variables</h2>
+
+<p><strong>let</strong>  - Keyword for variable declaration that solves JS’s variable hoisting issue which can result in scoping issues. While <em>var</em> hoists the variable to the nearest function, let will scope variables to the nearest block.</p>
+
+<p>Reassigning is allowed <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> :</p>
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Pratik"</span><span class="p">;</span>
+<span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Sampat"</span><span class="p">;</span>
+</code></pre>
+</div>
+<p>Redeclaring is not allowed in the same scope <img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> :</p>
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Pratik"</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Sampat"</span><span class="p">;</span>
+</code></pre>
+</div>
+<p>Redeclaring is allowed in different scopes <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> :</p>
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Pratik"</span>
+<span class="kd">function</span> <span class="nx">loadUser</span><span class="p">(</span><span class="nx">userArray</span><span class="p">)</span> <span class="p">{</span>
+     <span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s2">"Sampat"</span><span class="p">;</span>
+     <span class="k">return</span> <span class="nx">userName</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>const</strong> - Creates read-only named constants, typically in all CAPS. They cannot be reassigned and must be assigned an initial value.  They are block scoped not hoisted to the top of the function.</p>
+
+<h2 id="advantages-of-these-new-types-of-variables">Advantages of these new types of variables</h2>
+
+<p><em>let</em> and <em>const</em> prevent scoping issues.  For example, the code below produces unexpected behavior:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">function</span> <span class="nx">loadProfiles</span><span class="p">(</span><span class="nx">userArray</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">userArray</span><span class="p">)</span> <span class="p">{</span>				          
+        <span class="nx">connectToServer</span><span class="p">(</span><span class="s2">"/users/"</span><span class="o">+</span><span class="nx">userArray</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Fetched for "</span><span class="p">,</span> <span class="nx">userArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]});</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Running
+<code class="highlighter-rouge">loadprofiles(["Pratik", "Sohil"])</code>
+will log the following:</p>
+
+<p><code class="highlighter-rouge">Fetched for Sohil</code> <img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> <em>We expected ‘Fetched for Pratik’ but var hoisted the i variable to the top of the function</em></p>
+
+<p><code class="highlighter-rouge">Fetched for Sohil</code> <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">function</span> <span class="nx">loadProfiles</span><span class="p">(</span><span class="nx">userArray</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">userArray</span><span class="p">)</span> <span class="p">{</span>				          
+        <span class="nx">connectToServer</span><span class="p">(</span><span class="s2">"/users/"</span><span class="o">+</span><span class="nx">userArray</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Fetched for "</span><span class="p">,</span> <span class="nx">userArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]});</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Running
+<code class="highlighter-rouge">loadprofiles(["Pratik", "Sohil"])</code>
+will log the following:</p>
+
+<p><code class="highlighter-rouge">Fetched for Pratik</code> <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> <em>The i variable is contained in the same block instead of being hoisted.</em></p>
+
+<p><code class="highlighter-rouge">Fetched for Sohil</code> <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></p>
+
+<h2 id="let-vs-const">Let vs Const</h2>
+
+<p>They both behave very similarly, but use <em>let</em> for variables that you expect to change over the lifespan of the program.  <em>Const</em> expresses the idea of values that should not be changed.</p>
+
+</div>
+
+<div class="share">
+    <p>Share this post with: </p>
+  <ul class="social-network social-circle">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://0.0.0.0:4000/blog/web%20development/ES2015-let-and-const/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/intent/tweet?text=ES2015%20-%20let%20and%20const%20@%20&amp;url=http://0.0.0.0:4000/blog/web%20development/ES2015-let-and-const/" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="mailto:?Subject=ES2015%20-%20let%20and%20const&amp;body=Check%20out%20this%20post%20on%20Pratik's%20website:%20http://0.0.0.0:4000/blog/web%20development/ES2015-let-and-const/" class="icoEnvelope" title="Email"><i class="fa fa-envelope"></i></a></li>
+      </ul>
+</div>
+
+
+<div id="disqus_thread"></div>
+
+
+ 
+</div>
+
+
+</article>
+
+
+
+</body>
+
+<foot>
+
+    <footer class="site-footer">
+
+  <div class="wrapper-footer">
+
+
+    <center>
+        <center id="social"></center>
+		<p>
+		<a class="link" href="/">Home</a> /
+		<a class="link" href="/about/"><span class="hint--top-right hint--rounded" aria-label="Who dis ⁉️">About</span></a> /
+		<a class="link" href="/blog/">Blog</a> /
+		<a class="link" href="/contact/"><span class="hint--bottom-right hint--rounded" aria-label="Or Hire Me 🙈">Contact Me</span></a>
+        </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>©</span>
+
+		<a class="link" href="mailto:pratiks0809@gmail.com"><span class="hint--right hint--rounded" aria-label="Email me pls? 💌">Pratik Sampat</span></a>
+		<br>
+
+
+    </center>
+
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+
+
+<!-- Directory -->
+
+<script src="/js/main.js"></script>
+
+</foot>
+
+
+</foot>
+
+</html>

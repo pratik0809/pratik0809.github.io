@@ -1,30 +1,40 @@
 function mobileViewUpdate() {
     var viewportWidth = $(window).width();
-    
+
+    if (viewportWidth < 375) {
+      $("img#smug").css("display", "none");
+      $("#subheading").css("padding-left", "15px");
+
+    }
+
     if (viewportWidth < 415) {
     	$("ul").appendTo("#social");
-    	$(".container-fluid").css("bottom", " ");
-    	$(".container-fluid").css("position", " ");
-    	$(".site-footer").css("padding-top","0px");
-    	
+    	/*$(".container-fluid").css("bottom", " ");
+    	$(".container-fluid").css("position", " ");*/
+      $("#smug").css("max-height", "450px");
+      $("h2").css("font-size","2em");
     }
 
 
-    if (viewportWidth > 415 && viewportWidth < 700) {
+    if (viewportWidth > 374 && viewportWidth < 700) {
        $("ul").appendTo("#social");
-       $(".container-fluid").css("bottom","128px");
-       $(".site-footer").css("padding-top","0px");
-       $(".container-fluid").css("position", "fixed");
 
+
+       $(".site-footer").css("padding-top","0px");
+       $("h2").css("margin-top", "0px");
+       $("h2").css("margin-bottom", "10%");
+       $("h1").css("margin-bottom", "0px");
 
     }
-    else if (viewportWidth > 700) {
+    else if (viewportWidth > 738) {
     	$("ul").appendTo("#subheading");
-    	$(".container-fluid").css("bottom","110px");
-    	$(".site-footer").css("padding-top","30px");
-    	$(".container-fluid").css("position", "fixed");
+      $("img#smug").css("display", "inline");
+
     }
 }
 
 $(window).ready(mobileViewUpdate);
-$(window).resize(mobileViewUpdate);
+$(window).resize(function() {
+    clearTimeout(window.resizedFinished);
+    window.resizedFinished = setTimeout(mobileViewUpdate, 250);
+});

@@ -1,0 +1,88 @@
+---
+layout: post
+title: "ES2015 - Functions"
+subtitle:
+date: 2017-05-02
+author: Pratik Sampat
+category: Web Development
+finished: true
+permalink: /blog/:categories/:title/
+---
+## What else is new with ES2015 functions?
+
+* **Rest parameters** allows us to represent an indefinite amount of arguments as an array.  Typically used in function definition.
+* **Spread Operator** splits an array into individual elements.  Typically used in function invocation.
+* **Arrow functions** bind to the scope of where they are defined, not where they are used
+## The problem rest parameters solve
+
+Say we had a ```countPizzas``` function as shown :pizza: : 
+
+```javascript
+function countPizzas(pizzaArray) {
+  let pizzaLength = pizzaArray.length;
+  console.log(pizzaLength);
+}
+```
+
+and we ran ```countPizzas(["Grilled Chicken Pesto", "Margherrita", "Cheese"])``` we'd get ```3``` returned back to us. 
+
+But...
+
+what if I passed ```countPizzas()```? or ```countPizzas(undefined)```? 
+
+:x: :x: :x: :x: :x: "TYPE ERROR" FO SHO :x: :x: :x: :x: 
+
+We want to be able to expect unexpected arguments in our functions. 
+
+## The solution
+
+ES2015 gives us the power to pass *default* parameters!   
+
+![Unlimited Power!](https://media.giphy.com/media/hokMyu1PAKfJK/giphy.gif)
+
+This is what our function would look like: 
+
+```javascript
+function countPizzas(pizzaArray = []) {
+  let pizzaLength = pizzaArray.length;
+  console.log(pizzaLength);
+}
+```
+
+now if we passed ```countPizzas()```? or ```countPizzas(undefined)```, our console would return ```0``` instead of throwing crazy type errors. 
+
+COOLSAUCE HUH :information_desk_person:. 
+
+## The problem named parameters solve
+
+Say we upgraded our ```countPizzas``` function as shown but **with a commonToppings parameter to count the common toppings found on the pizzas too** : 
+
+```javascript
+function countPizzas(pizzaArray, commonToppings = {}) {
+  let cheese = commonToppings.cheese;
+  let basil = commonToppings.basil;
+  let chicken = commonToppings.chicken;
+
+  let pizzaLength = pizzaArray.length;
+  console.log(pizzaLength);
+}
+```
+
+Without opening up the countPizzas function, it is unclear what our function expects. AND we've added all these extra locally scoped variables (cheese, basil, chicken).  
+
+## The solution
+
+We use *named* parameters to create locally scoped variables right in the argument. Take a look: 
+
+```javascript
+function countPizzas(pizzaArray, {cheese, basil, chicken} = {}) {
+  
+  let pizzaLength = pizzaArray.length;
+  console.log(pizzaLength);
+  console.log(cheese);
+  console.log(basil);
+  console.log(chicken);
+  //now we have locally scoped "cheese", "basil", and "chicken" variables that return true or false 
+}
+```
+YAYAY. Now just looking at the function signature, we know the function expects those specific toppings. :pizza: :pizza: :pizza: :pizza: :pizza: :pizza: 

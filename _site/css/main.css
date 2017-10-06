@@ -36,6 +36,10 @@ img {
   display: block;
   max-width: 100%; }
 
+img[src$="imgInPost"] {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
 /**
  * Figures
  */
@@ -107,10 +111,11 @@ a:hover {
  * Share
  */
 .share {
-  margin-bottom: 30px;
   border-top: 1px solid #eee;
   color: #777;
-  font-size: 17px; }
+  font-size: 17px;
+  text-align: center;
+  margin-top: 30px; }
 
 .share a {
   border-bottom: none; }
@@ -316,6 +321,9 @@ svg {
 svg:hover {
   fill: white; }
 
+.emoji {
+  display: inline-block; }
+
 /**
  * Wrapper
  */
@@ -341,6 +349,9 @@ svg:hover {
 
   .social-circle li i {
     line-height: 40px; } }
+@media only screen and (min-device-width: 325px) and (max-device-width: 738px) and (orientation: landscape) {
+  #smug {
+    display: none; } }
 /**
  * Clearfix
  */
@@ -442,7 +453,7 @@ svg:hover {
  * Posts
  */
 .post-meta {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #91989F; }
 
 .post-header {
@@ -451,7 +462,7 @@ svg:hover {
 
 .post-title {
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 35px;
   letter-spacing: -1px;
   line-height: 1; }
@@ -467,7 +478,7 @@ svg:hover {
   text-align: center;
   display: block;
   letter-spacing: 1px;
-  margin-bottom: 80px; }
+  margin-bottom: 0px; }
 
 .post-tags-item {
   padding: 2px 6px;

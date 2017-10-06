@@ -1,7 +1,7 @@
-
-  
+<html>
+  <head>
       
-  
+  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,10 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/hint.min.css">
-  <link rel="canonical" href="http://localhost:4000/contact/">
-  <link rel="alternate" type="application/rss+xml" title="Pratik Sampat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://0.0.0.0:4000/contact/">
+  <link rel="alternate" type="application/rss+xml" title="Pratik Sampat" href="http://0.0.0.0:4000/feed.xml">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="canonical" href="%7B%20%7B%20site.url%20%7D%20%7D%7B%20%7B%20page.url%20%7D%20%7D">
+  <link rel="canonical" href=" { { site.url } }{ { page.url } }" />
 
 <!--JS-->
 
@@ -28,13 +28,13 @@
 
 <!-- Google font -->
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto%20Sans">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
 
 <!-- font awesome -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+</head>
 
 
   
@@ -44,7 +44,7 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
-  ga('create', 'UA-90540912-1', 'auto');
+  ga('create', 'UA-90540912-2', 'auto');
   ga('send', 'pageview');
     
 	</script>
@@ -54,9 +54,9 @@
 
   
 
+  </head>
   
-  
-  
+  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,94 +67,87 @@
   
   
   	
-  	<script src="../js/contact.js" type="text/javascript"></script>
+  	<script src='../js/contact.js' type="text/javascript"></script>
   	
   
 
 
-
+</head>
 
 
 <header class="post-header">
-	<center>
-<div class="contact-title">Contact</div>
-		<div class="contact-subtitle"><p></p></div>
-</center>
+	<center><div class="contact-title">Contact</div>
+		<div class="contact-subtitle"><p></p></div></center>
 </header>
 
 <div class="wrapper">
 	<div class="post-content">
 			<div class="row">
-		<div class="col-xs-12">
-			<!--<img src="../img/thumbsup.png" class="img-fluid" height="30%" id="thumbsup" style="margin-left: 700px;" />-->
+		<div class="col-xs-12 col-md-offset-2 col-md-4">
+			<img src="../img/callme.jpg" class="center-block" alt="Yes, that's me." />
+			<br />
+			<button class="center-block" id="msgme" onclick="window.open('https://m.me/pratik0809', '_blank', 'location=yes,height=601,width=762,scrollbars=yes,status=yes');">
+				<div id="messengerlogo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="96 93 322 324">
+						<path d="M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z" fill="#0084ff" id="logofill"/>
+					</svg>
+				</div>
+				Message Me
+			</button>
 		</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<h2 class="text-center" style="margin-top: -0px;">Got a deadly pun for me? Let's connect</h2>
+		<div class="col-xs-12 col-md-5">
+			<form action="/" method="post" id="myform">
+				<div class="row">
+					<div class="">
+									<label>Name?</label>
+									<input type="text" class="form-control" id="contact-name" placeholder="Name" name="entry.1983930535" aria-describedby="i.desc.940234504 i.err.940234504" required>
+									<p id="contact-name-error" class="help-block" required></p>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="">
+
+									<label>Email?</label>
+									<input type="email" class="form-control" id="contact-email" placeholder="Email" name="entry.118759962" aria-describedby="i.desc.1764646944 i.err.1764646944" required>
+									<p id="contact-email-error" class="help-block" required></p>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="">
+
+									<label for="contact-message">Whatsup?</label>
+									<textarea class="form-control" id="contact-message" placeholder="Message" name="entry.1263934566" aria-describedby="contact-message-error" rows="5" required></textarea>
+									<p id="contact-message-error" class="help-block" required></p>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="" id="submit">
+						<button type="submit" class="btn btn-default" id="contact-form-submit">Send</button>
+						<span id="success">  NOICE! I'll send you an email back ASAP 🤘</span>
+					</div>
+				</div>
+			</form>
+		<br />
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<ul class="social-network social-circle center">
+												<li><a href="http://facebook.com/pratik0809" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="https://www.youtube.com/user/pratiks0809" class="icoYouTube" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+												<li><a href="http://instagram.com/pratik0809" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+												<li><a href="http://snapchat.com/add/pratik0809" class="icoSnapchat" title="Snapchat" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+												<li><a href="https://github.com/pratik0809/" class="icoGithub" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>
+												<li><a href="https://linkedin.com/in/pratiksampat" class="icoLinkedin" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+												<li><a href="mailto:pratiks0809@gmail.com?Subject=Hey%20Pratik!" class="icoEnvelope" title="Email"><i class="fa fa-envelope"></i></a></li>
+										</ul>
+			</div>
+			</div>
 		</div>
 	</div>
 
-<br>
-
-		<button class="center-block" id="msgme" onclick="window.open('https://m.me/pratik0809', '_blank', 'location=yes,height=601,width=762,scrollbars=yes,status=yes');">
-			<div id="messengerlogo">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="96 93 322 324">
-					<path d="M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z" fill="#0084ff" id="logofill"></path>
-				</svg>
-			</div>
-			Message Me
-		</button>
-
-		<p>I give this plugin two <img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" align="absmiddle">!</p>
-	<br>
-	<form action="/" method="post" id="myform">
-		<div class="row">
-			<div class="col-md-offset-4 col-md-4">
-			        <label>Name?</label>
-			        <input type="text" class="form-control" id="contact-name" placeholder="Name" name="entry.1983930535" aria-describedby="i.desc.940234504 i.err.940234504" required>
-			        <p id="contact-name-error" class="help-block" required></p>
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-offset-4 col-md-4">
-
-			        <label>Email?</label>
-			        <input type="email" class="form-control" id="contact-email" placeholder="Email" name="entry.118759962" aria-describedby="i.desc.1764646944 i.err.1764646944" required>
-			        <p id="contact-email-error" class="help-block" required></p>
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-offset-4 col-md-4">
-
-			        <label for="contact-message">Whatsup?</label>
-			        <textarea class="form-control" id="contact-message" placeholder="Message" name="entry.1263934566" aria-describedby="contact-message-error" rows="1" required></textarea>
-			        <p id="contact-message-error" class="help-block" required></p>
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-offset-4 col-md-4" id="submit">
-			  <button type="submit" class="btn btn-default" id="contact-form-submit">Send</button>
-			  <span id="success">  NOICE! I'll send you an email back ASAP 🤘</span>
-			</div>
-		</div>
-	</form>
-<br>
-<div class="row">
-	<div class="col-xs-12 text-center">
-		<ul class="social-network social-circle center">
-		                <li><a href="http://facebook.com/pratik0809" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-		                <li><a href="https://www.youtube.com/user/pratiks0809" class="icoYouTube" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-		                <li><a href="http://instagram.com/pratik0809" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-		                <li><a href="http://snapchat.com/add/pratik0809" class="icoSnapchat" title="Snapchat" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
-		                <li><a href="https://github.com/pratik0809/" class="icoGithub" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>
-		                <li><a href="https://linkedin.com/in/pratiksampat" class="icoLinkedin" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-		                <li><a href="mailto:pratiks0809@gmail.com?Subject=Hey%20Pratik!" class="icoEnvelope" title="Email"><i class="fa fa-envelope"></i></a></li>
-		            </ul>
-	</div>
-	</div>
+<br />
 
 	</div>
 </div>
@@ -190,13 +183,13 @@
 		<a class="link" href="/">Home</a> /
 		<a class="link" href="/about/"><span class="hint--top-right hint--rounded" aria-label="Who dis ⁉️">About</span></a> /
 		<a class="link" href="/blog/">Blog</a> /
-		<a class="link" href="/contact/"><span class="hint--bottom-right hint--rounded" aria-label="Or Hire Me :see_no_evil:">Contact Me</span></a>
+		<a class="link" href="/contact/"><span class="hint--bottom-right hint--rounded" aria-label="Or Hire Me 🙈">Contact Me</span></a>
         </p>
 
         <span><script>document.write(new Date().getFullYear());</script></span>
-        <span>©</span>
+        <span>&copy;</span>
 
-		<a class="link" href="mailto:pratiks0809@gmail.com"><span class="hint--right hint--rounded" aria-label="Email me pls? :love_letter:">Pratik Sampat</span></a>
+		<a class="link" href="mailto:pratiks0809@gmail.com"><span class="hint--right hint--rounded" aria-label="Email me pls? 💌">Pratik Sampat</span></a>
 		<br>
 
 
@@ -208,5 +201,4 @@
 
 
 </footer>
-
-</div>
+</html>

@@ -1,14 +1,28 @@
 ---
 layout: page
 title: Blog
-subtitle: 
+subtitle:
 permalink: /blog/
 ---
+<style>
 
+	.post-content {
+		max-width: 700px;
+	}
+
+</style>
 {% for category in site.categories %}
 {% capture cat %}{{ category | first }}{% endcapture %}
 
-<h2>{{ cat | capitalize }}</h2>
+<h2>
+{% if cat == 'DIY' %}
+		{{ cat | uppercase }}
+
+{% else %}
+   {{ cat | capitalize }}
+{% endif %}
+
+</h2>
 	<ul>
 	{% for post in site.categories[cat] %}
 	  <li>

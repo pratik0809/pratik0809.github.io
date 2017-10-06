@@ -45,9 +45,14 @@ ul, ol, dl, figure,
  */
 img {
     display: block;
-
     max-width: 100%;
 }
+
+img[src$="imgInPost"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 
 
 
@@ -143,10 +148,12 @@ a:hover {
  */
 
 .share {
-    margin-bottom: 30px;
+
     border-top: 1px solid #eee;
     color: #777;
     font-size: 17px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .share a {
@@ -396,6 +403,10 @@ svg {
 svg:hover {
   fill: white;
 }
+
+.emoji {
+  display: inline-block;
+}
 /**
  * Wrapper
  */
@@ -430,12 +441,17 @@ svg:hover {
         }
 
 
-
-
-
-
 }
 
+@media only screen
+  and (min-device-width: 325px)
+  and (max-device-width: 738px)
+  and (orientation: landscape) {
+
+      #smug {
+        display: none;
+      }
+}
 
 
 /**
