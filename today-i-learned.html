@@ -1,0 +1,25 @@
+---
+layout: page
+title: today I learned
+subtitle:
+---
+{% assign sorted_cats = site.categories | sort: date %}
+{% for category in sorted_cats reversed %}
+{% assign sorted_posts = category[1] | reversed %}
+<h2 id="{{category[0] | uri_escape | downcase }}">
+  {% if category[0] == 'DIY' %}
+  		{{ category[0] | uppercase }}
+  {% else %}
+     {{ category[0] | capitalize }}
+  {% endif %}
+</h2>
+
+<ul>
+  {% for post in sorted_posts %}
+  <li>
+  <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+     <span class="date"> - {{ post.date | date_to_long_string }}</span></p>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

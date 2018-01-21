@@ -6,7 +6,7 @@ date: 2017-05-01
 author: Pratik Sampat
 category: Web Development
 finished: true
-permalink: /blog/:categories/:title/
+permalink: /today-i-learned/:categories/:title/
 ---
 ## ES2015: Two new ways to declare variables
 
@@ -57,17 +57,17 @@ loadProfiles(["Pratik", "Sohil"]);
 Result :x: :
 
 ```
-Expected: 
+Expected:
 Fetched for Pratik
 Fetched for Sohil
 
-Actual: 
-Fetched for Sohil 
+Actual:
+Fetched for Sohil
 Fetched for Sohil
 ```
-In this case, ```var``` hoisted the ```i``` variable to the top of the ```loadProfiles``` function (out of the ```for``` loop scope). When the callback is executed, the ```i``` variable referenced was outside the loop.  Keep in mind, because our callbacks are async, the loop completes before any are actually executed. 
+In this case, ```var``` hoisted the ```i``` variable to the top of the ```loadProfiles``` function (out of the ```for``` loop scope). When the callback is executed, the ```i``` variable referenced was outside the loop.  Keep in mind, because our callbacks are async, the loop completes before any are actually executed.
 
-We can use *let* or *const* to fix this! 
+We can use *let* or *const* to fix this!
 
 
 ```javascript
@@ -83,15 +83,15 @@ loadProfiles(["Pratik", "Sohil"]);
 Result :white_check_mark: :
 
 ```
-Expected: 
+Expected:
 Fetched for Pratik
 Fetched for Sohil
 
-Actual: 
-Fetched for Pratik 
+Actual:
+Fetched for Pratik
 Fetched for Sohil
-``` 
-Because ```i``` is now locally scoped within the ```for``` loop, a new ```i``` is created for each callback function. 
+```
+Because ```i``` is now locally scoped within the ```for``` loop, a new ```i``` is created for each callback function.
 
 ## Let vs Const
 

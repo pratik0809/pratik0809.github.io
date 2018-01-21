@@ -6,14 +6,14 @@ date: 2017-03-04
 author: Pratik Sampat
 category: DIY
 finished: true
-permalink: /blog/:categories/:title/
+permalink: /today-i-learned/:categories/:title/
 ---
 
 ![Standing Desk](http://i.imgur.com/C20sDaO.jpg)
 
 Moving into a new place meant I needed a desk. I started looking into standing desks, but did I really want to spend $800 on a desk? I didn't even understand why they were so expensive :thinking:.  Then I realized most of them were height-adjustable and that's where the extra cost was.  But I didn't see myself getting any taller or shorter any time soon. Also, I didn't need to sit..I'm not WEAK. I figured a DIY solution could be an answer and found this post: [http://opensoul.org/2012/01/09/the-40-standup-desk/](http://opensoul.org/2012/01/09/the-40-standup-desk/) (thanks Brandon Keepers for this post!).  
 
-His instructions were extremely straightforward except I had no experience with wood work. So I gathered the following materials and tools:
+His instructions were straightforward except I had no experience with wood work. So I gathered the following materials and tools:
 
 ## Materials
 1. [IKEA Tornliden Table Top](http://www.ikea.com/us/en/catalog/products/20251479/#/20240626) - 1 x $39.99

@@ -24,6 +24,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    overflow-y: scroll;
 }
 
 
@@ -121,13 +122,6 @@ a {
 
 a:hover {
     border-bottom: 2px dotted #000;
-}
-
-
-.post-content h2:before {
-
-
-    color: #25bcba;
 }
 
 .link {
@@ -411,8 +405,8 @@ svg:hover {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 20));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 20));
     margin-right: auto;
     margin-left:auto;
     padding-right: $spacing-unit;
