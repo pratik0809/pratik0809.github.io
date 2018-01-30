@@ -115,24 +115,15 @@ h6 {
  * Links
  */
 
+
 a {
-    color: #25b3bc;
-    text-decoration: none;
-    transition: border .5s;
-}
-
-a:hover {
-    border-bottom: 2px dotted #000;
-}
-
-.link {
     padding: 2px;
     color: #25b3bc;
     text-decoration: none;
     transition: background-color .7s;
 }
 
-.link:hover {
+a:hover {
     background-color: #e6e6e6;
     border: none;
 }
