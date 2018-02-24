@@ -113,7 +113,6 @@
     h5,
     h6 {
         font-size: 18px;
-    margin: 24px;
     }
 }
 
@@ -158,4 +157,11 @@
 
 .date {
 	color: #B6B6B6;
+}
+
+blockquote {
+  &.source {
+    font-size: 10px;
+    font-style: italic;
+  }
 }
