@@ -116,17 +116,16 @@
     }
 }
 
-.post-content p, li{
-
+.post-content > p, li{
     line-height: 1.6em;
-    font-family: georgia,serif;
+    font-family: Montserrat, Helvetica,serif;
     font-size: 1.3em;
     color: black;
 }
 
-.page-content p, li {
+.page-content > p, li {
   line-height: 1.6em;
-  font-family: georgia,serif;
+  font-family: Montserrat, Helvetica,serif;
   font-size: 1.2em;
   color: black;
 }
